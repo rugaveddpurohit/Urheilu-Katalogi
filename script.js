@@ -46,5 +46,4 @@ sortSelect.addEventListener("change", (e) => {
     renderTeams();
 });
 
-// Initial load
 renderTeams();

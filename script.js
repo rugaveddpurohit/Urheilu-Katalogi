@@ -1,4 +1,3 @@
-// Initial sample data (urheilujoukkueet)
 let teams = [
     { id: 1, name: "FC Barcelona", sport: "Jalkapallo", city: "Barcelona" },
     { id: 2, name: "LA Lakers", sport: "Koripallo", city: "Los Angeles" },
@@ -9,7 +8,6 @@ const teamList = document.getElementById("teamList");
 const teamForm = document.getElementById("teamForm");
 const sortSelect = document.getElementById("sortSelect");
 
-// Render teams
 function renderTeams() {
     teamList.innerHTML = "";
     teams.forEach(team => {
@@ -25,7 +23,6 @@ function renderTeams() {
     });
 }
 
-// Add team (Käyttäjän muokattavissa oleva sisältö)
 teamForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const name = document.getElementById("teamName").value;
@@ -38,18 +35,15 @@ teamForm.addEventListener("submit", (e) => {
     teamForm.reset();
 });
 
-// Delete team
 function deleteTeam(id) {
     teams = teams.filter(team => team.id !== id);
     renderTeams();
 }
 
-// Sort content (Sisällön lajittelu)
 sortSelect.addEventListener("change", (e) => {
     const criteria = e.target.value;
     teams.sort((a, b) => a[criteria].localeCompare(b[criteria]));
     renderTeams();
 });
 
-// Initial load
 renderTeams();

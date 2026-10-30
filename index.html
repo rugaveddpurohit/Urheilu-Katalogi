@@ -1,25 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TeamGear Pro - Urheilujoukkueiden Kokoelma</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
-<link rel="stylesheet" href="styles.css" />
 
 <body>
     <header class="luxury-navbar">
         <div class="logo-box">
-            <i class="fa-solid fa-shield-halved logo-icon"></i>
-            <span class="logo-text">TEAMGEAR <span>PRO</span></span>
+            <a href="#etusivu" class="logo-link">
+                <i class="fa-solid fa-shield-halved logo-icon"></i>
+                <span class="logo-text">TEAMGEAR <span>PRO</span></span>
+            </a>
         </div>
         <nav class="nav-links">
             <button class="nav-btn active" data-tab="tab-etusivu"><i class="fa-solid fa-grid-2"></i>Etusivu</button>
-            <button class="nav-btn" data-tab="tab-verkkokauppa"><i class="fa-solid fa-basket-shopping"></i>Verkkokauppa</button>
-            <button class="nav-btn disabled" data-tab="tab-terveys"><i class="fa-solid fa-heart-pulse"></i>Terveydenseuranta</button>
-            <button class="nav-btn disabled" data-tab="tab-teknologia"><i class="fa-solid fa-microchip"></i> 4. Teknologian edut</button>
-            <button class="nav-btn disabled" data-tab="tab-yhteytta"><i class="fa-solid fa-headset"></i> 5. Ota yhteyttä</button>
+            <button class="nav-btn" data-tab="tab-verkkokauppa"><i
+                    class="fa-solid fa-basket-shopping"></i>Verkkokauppa</button>
+            <button class="nav-btn disabled" data-tab="tab-terveys"><i
+                    class="fa-solid fa-heart-pulse"></i>Terveydenseuranta</button>
+            <button class="nav-btn disabled" data-tab="tab-teknologia"><i class="fa-solid fa-microchip"></i>Teknologian
+                edut</button>
+            <button class="nav-btn disabled" data-tab="tab-yhteytta"><i class="fa-solid fa-headset"></i>Ota
+                yhteyttä</button>
         </nav>
         <div class="nav-cart-box">
             <button id="open-cart-btn" class="glow-cart-btn">
@@ -29,22 +36,6 @@
             </button>
         </div>
     </header>
-    <main class="page-content active-page" id="home">
-        <h1>Welcom to TeamGear Pro</h1>
-        <p>Your one-stop shop for all your sports gear needs!</p>
-    </main>
-    <main class="page-content" id="catalog">
-        <h1 class="page-title">Katalogi</h1>
-        <div class="catalog-layout" id="product-cards-container"></div>
-    </main>
-    <main class="page-content" id="cart">
-        <h1 class="page-title">Ostoskori</h1>
-        <div class="checkout-layout">
-            <div class="cart-items" id="cart-items-container"></div>
-            <div class="order-summary" id="order-summary-container"></div>
-        </div>
-    </main>
-    <footer class="footer">
-        <p>&copy; 2026 TeamGear Pro. All rights reserved.</p>
 </body>
+
 </html>

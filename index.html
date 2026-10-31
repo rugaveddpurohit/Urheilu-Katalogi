@@ -47,9 +47,71 @@
                     </div>
 
                     <div class="filter-group">
-                        <label></label>
+                        <label>Etsi tuotetta</label>
+                        <div class="search-input-wrapper">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="search-input" placeholder="Kirjoita nimi..." />
+                        </div>
                     </div>
 
+                    <div class="filter-group">
+                        <label>Kategoria</label>
+                        <select id="category-filter">
+                            <option value="all">Kaikki Kategoriat</option>
+                            <option value="peliasut">Peliasut & Paidat</option>
+                            <option value="takit">Takit & Lämpövarusteet</option>
+                            <option value="housut">Housut & Trikoot</option>
+                            <option value="kengät">Jalkineet & Suojat</option>
+                            <option value="varusteet">Kassit & Tarvikkeet</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Väri (Color)</label>
+                        <div class="color-swatches" id="color-swatches">
+                            <span class="swatch active" data-color="all" title="Kaikki">Kaikki</span>
+                            <span class="swatch color-red" data-color="Punainen" title="Punainen"></span>
+                            <span class="swatch color-blue" data-color="Sininen" title="Sininen"></span>
+                            <span class="swatch color-black" data-color="Musta" title="Musta"></span>
+                            <span class="swatch color-gold" data-color="Kulta" title="Kulta"></span>
+                            <span class="swatch color-white" data-color="Valkoinen" title="Valkoinen"></span>
+                            <span class="swatch color-cyan" data-color="Syaani" title="Syaani"></span>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Koko (Size)</label>
+                        <div class="size-boxes" id="size-boxes">
+                            <button class="size-btn active" data-size="all">Kaikki</button>
+                            <button class="size-btn" data-size="S">S</button>
+                            <button class="size-btn" data-size="M">M</button>
+                            <button class="size-btn" data-size="L">L</button>
+                            <button class="size-btn" data-size="XL">XL</button>
+                            <button class="size-btn" data-size="XXL">XXL</button>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Järjestä</label>
+                        <select id="sort-filter">
+                            <option value="default">Suositellut</option>
+                            <option value="price-low">Hinta: Edullisin ensin</option>
+                            <option value="price-high">Hinta: Arvokkain ensin</option>
+                            <option value="name">Nimi (A-Z)</option>
+                        </select>
+                    </div>
+
+                    <div class="customizer-card">
+                        <div class="customizer-head">
+                            <i class="fa-solid fa-paintbrush"></i>
+                            <h4>Räätälöi Seuralogo</h4>
+                        </div>
+                        <p>Kirjoita joukkueesi nimi näkyviin tuotteisiin:</p>
+                        <input type="text" id="team-name-input" placeholder="Esim. FC Helsinki United" />
+                        <button id="apply-team-name" class="accent-btn">
+                            Päivitä Kokoelma
+                        </button>
+                    </div>
                 </aside>
             </div>
         </section>

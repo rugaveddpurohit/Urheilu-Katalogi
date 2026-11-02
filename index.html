@@ -1,25 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TeamGear Pro - Urheilujoukkueiden Kokoelma</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
-<link rel="stylesheet" href="styles.css" />
 
 <body>
     <header class="luxury-navbar">
         <div class="logo-box">
-            <i class="fa-solid fa-shield-halved logo-icon"></i>
-            <span class="logo-text">TEAMGEAR <span>PRO</span></span>
+            <a href="#etusivu" class="logo-link">
+                <i class="fa-solid fa-shield-halved logo-icon"></i>
+                <span class="logo-text">TEAMGEAR <span>PRO</span></span>
+            </a>
         </div>
         <nav class="nav-links">
             <button class="nav-btn active" data-tab="tab-etusivu"><i class="fa-solid fa-grid-2"></i>Etusivu</button>
-            <button class="nav-btn" data-tab="tab-verkkokauppa"><i class="fa-solid fa-basket-shopping"></i>Verkkokauppa</button>
-            <button class="nav-btn disabled" data-tab="tab-terveys"><i class="fa-solid fa-heart-pulse"></i>Terveydenseuranta</button>
-            <button class="nav-btn disabled" data-tab="tab-teknologia"><i class="fa-solid fa-microchip"></i> 4. Teknologian edut</button>
-            <button class="nav-btn disabled" data-tab="tab-yhteytta"><i class="fa-solid fa-headset"></i> 5. Ota yhteyttä</button>
+            <button class="nav-btn" data-tab="tab-verkkokauppa"><i
+                    class="fa-solid fa-basket-shopping"></i>Verkkokauppa</button>
+            <button class="nav-btn disabled" data-tab="tab-terveys"><i
+                    class="fa-solid fa-heart-pulse"></i>Terveydenseuranta</button>
+            <button class="nav-btn disabled" data-tab="tab-teknologia"><i class="fa-solid fa-microchip"></i>Teknologian
+                edut</button>
+            <button class="nav-btn disabled" data-tab="tab-yhteytta"><i class="fa-solid fa-headset"></i>Ota
+                yhteyttä</button>
         </nav>
         <div class="nav-cart-box">
             <button id="open-cart-btn" class="glow-cart-btn">
@@ -29,22 +36,86 @@
             </button>
         </div>
     </header>
-    <main class="page-content active-page" id="home">
-        <h1>Welcom to TeamGear Pro</h1>
-        <p>Your one-stop shop for all your sports gear needs!</p>
-    </main>
-    <main class="page-content" id="catalog">
-        <h1 class="page-title">Katalogi</h1>
-        <div class="catalog-layout" id="product-cards-container"></div>
-    </main>
-    <main class="page-content" id="cart">
-        <h1 class="page-title">Ostoskori</h1>
-        <div class="checkout-layout">
-            <div class="cart-items" id="cart-items-container"></div>
-            <div class="order-summary" id="order-summary-container"></div>
-        </div>
-    </main>
-    <footer class="footer">
-        <p>&copy; 2026 TeamGear Pro. All rights reserved.</p>
+
+    <div class="main-container">
+        <section id="tab-etusivu" class="tab-content active">
+            <div class="catalog-layout">
+                <aside class="glow-sidebar">
+                    <div class="fillter-header">
+                        <h3><i class="fa-solid fa-sliders"></i>Rajaa Tuotteita</h3>
+                        <button id="reset-filters" class="reset-btn">Tyhjennä</button>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Etsi tuotetta</label>
+                        <div class="search-input-wrapper">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="search-input" placeholder="Kirjoita nimi..." />
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Kategoria</label>
+                        <select id="category-filter">
+                            <option value="all">Kaikki Kategoriat</option>
+                            <option value="peliasut">Peliasut & Paidat</option>
+                            <option value="takit">Takit & Lämpövarusteet</option>
+                            <option value="housut">Housut & Trikoot</option>
+                            <option value="kengät">Jalkineet & Suojat</option>
+                            <option value="varusteet">Kassit & Tarvikkeet</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Väri (Color)</label>
+                        <div class="color-swatches" id="color-swatches">
+                            <span class="swatch active" data-color="all" title="Kaikki">Kaikki</span>
+                            <span class="swatch color-red" data-color="Punainen" title="Punainen"></span>
+                            <span class="swatch color-blue" data-color="Sininen" title="Sininen"></span>
+                            <span class="swatch color-black" data-color="Musta" title="Musta"></span>
+                            <span class="swatch color-gold" data-color="Kulta" title="Kulta"></span>
+                            <span class="swatch color-white" data-color="Valkoinen" title="Valkoinen"></span>
+                            <span class="swatch color-cyan" data-color="Syaani" title="Syaani"></span>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Koko (Size)</label>
+                        <div class="size-boxes" id="size-boxes">
+                            <button class="size-btn active" data-size="all">Kaikki</button>
+                            <button class="size-btn" data-size="S">S</button>
+                            <button class="size-btn" data-size="M">M</button>
+                            <button class="size-btn" data-size="L">L</button>
+                            <button class="size-btn" data-size="XL">XL</button>
+                            <button class="size-btn" data-size="XXL">XXL</button>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Järjestä</label>
+                        <select id="sort-filter">
+                            <option value="default">Suositellut</option>
+                            <option value="price-low">Hinta: Edullisin ensin</option>
+                            <option value="price-high">Hinta: Arvokkain ensin</option>
+                            <option value="name">Nimi (A-Z)</option>
+                        </select>
+                    </div>
+
+                    <div class="customizer-card">
+                        <div class="customizer-head">
+                            <i class="fa-solid fa-paintbrush"></i>
+                            <h4>Räätälöi Seuralogo</h4>
+                        </div>
+                        <p>Kirjoita joukkueesi nimi näkyviin tuotteisiin:</p>
+                        <input type="text" id="team-name-input" placeholder="Esim. FC Helsinki United" />
+                        <button id="apply-team-name" class="accent-btn">
+                            Päivitä Kokoelma
+                        </button>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </div>
 </body>
+
 </html>

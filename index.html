@@ -17,19 +17,19 @@
         </div>
         <nav class="nav-links">
             <button class="nav-btn active" data-tab="tab-etusivu">
-                <i class="fa-solid fa-grid-2"></i> 1. Etusivu
+                <i class="fa-solid fa-grid-2"></i> Etusivu
             </button>
             <button class="nav-btn" data-tab="tab-verkkokauppa">
-                <i class="fa-solid fa-basket-shopping"></i> 2. Verkkokauppa
+                <i class="fa-solid fa-basket-shopping"></i> Verkkokauppa
             </button>
             <button class="nav-btn disabled" data-tab="tab-terveys">
-                <i class="fa-solid fa-heart-pulse"></i> 3. Terveydenseuranta
+                <i class="fa-solid fa-heart-pulse"></i> Terveydenseuranta
             </button>
             <button class="nav-btn disabled" data-tab="tab-teknologia">
-                <i class="fa-solid fa-microchip"></i> 4. Teknologian edut
+                <i class="fa-solid fa-microchip"></i> Teknologian edut
             </button>
             <button class="nav-btn disabled" data-tab="tab-yhteytta">
-                <i class="fa-solid fa-headset"></i> 5. Ota yhteyttä
+                <i class="fa-solid fa-headset"></i> Ota yhteyttä
             </button>
         </nav>
         <div class="nav-cart-box">
@@ -133,6 +133,92 @@
                 </main>
             </div>
         </section>
+
+        <section id="tab-verkkokauppa" class="tab-content">
+            <div class="verkkokauppa-hero">
+                <h2>Verkkokauppa & Tilaushallinta</h2>
+                <p>
+                    Hallitse joukkueesi valintoja, tarkastele valittuja kokoelmia ja
+                    siirry kassalle.
+                </p>
+            </div>
+
+            <div class="store-grid-layout">
+                <div class="store-cart-summary-box">
+                    <h3>Valitut Joukkuetuotteet</h3>
+                    <div id="store-cart-list" class="store-cart-list"></div>
+                </div>
+
+                <div class="checkout-panel">
+                    <h3>Tilausyhteenveto</h3>
+                    <div class="checkout-line">
+                        <span>Tuotteet yhteensä:</span>
+                        <strong id="summary-subtotal">0.00 €</strong>
+                    </div>
+                    <div class="checkout-line">
+                        <span>Seura-alennus (Automattinen):</span>
+                        <strong id="summary-discount" class="discount-text">-0.00 €</strong>
+                    </div>
+                    <div class="checkout-line">
+                        <span>Toimituskulut:</span>
+                        <span>Ilmainen seurantoimitus</span>
+                    </div>
+                    <hr class="divider" />
+                    <div class="checkout-line total-line">
+                        <span>Kokonaissumma:</span>
+                        <strong id="summary-total">0.00 €</strong>
+                    </div>
+
+                    <button id="final-checkout-btn" class="checkout-submit-btn">
+                        <i class="fa-solid fa-lock"></i> Vahvista ja Lähetä Tilaus
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab-terveys" class="tab-content">
+            <div class="placeholder-view">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <h2>3. Terveydenseuranta</h2>
+                <p>Tämä osio on tekeillä teammatesi toimesta.</p>
+            </div>
+        </section>
+
+        <section id="tab-teknologia" class="tab-content">
+            <div class="placeholder-view">
+                <i class="fa-solid fa-microchip"></i>
+                <h2>4. Teknologian edut</h2>
+                <p>Tämä osio on tekeillä teammatesi toimesta.</p>
+            </div>
+        </section>
+
+        <section id="tab-yhteytta" class="tab-content">
+            <div class="placeholder-view">
+                <i class="fa-solid fa-headset"></i>
+                <h2>5. Ota yhteyttä</h2>
+                <p>Tämä osio on tekeillä teammatesi toimesta.</p>
+            </div>
+        </section>
+    </div>
+
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="drawer-overlay" id="close-drawer-overlay"></div>
+        <div class="drawer-content">
+            <div class="drawer-header">
+                <h3><i class="fa-solid fa-bag-shopping"></i> Joukkueen Kori</h3>
+                <button id="close-drawer-btn" class="close-btn">&times;</button>
+            </div>
+            <div class="drawer-body" id="drawer-cart-items"></div>
+            <div class="drawer-footer">
+                <div class="drawer-total">
+                    <span>Yhteensä:</span>
+                    <strong id="drawer-total-price">0.00 €</strong>
+                </div>
+                <button id="go-to-verkkokauppa" class="accent-btn full-width">
+                    Siirry Verkkokauppaan & Kassalle
+                </button>
+            </div>
+        </div>
     </div>
 </body>
 

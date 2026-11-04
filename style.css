@@ -112,7 +112,6 @@ body {
     box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
 }
 
-
 .glow-cart-btn {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--border-color);
@@ -237,6 +236,134 @@ body {
 .customizer-card input {
     padding-left: 12px;
 }
+
+.color-swatches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.swatch {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.2s;
+}
+
+.swatch.active {
+    border-color: white;
+    transform: scale(1.15);
+}
+
+.swatch[data-color="all"] {
+    width: auto;
+    height: 28px;
+    padding: 0 10px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+}
+
+.color-red {
+    background: #ff4757;
+}
+
+.color-blue {
+    background: #1e90ff;
+}
+
+.color-black {
+    background: #2f3542;
+}
+
+.color-gold {
+    background: #ffa502;
+}
+
+.color-white {
+    background: #ffffff;
+}
+
+.color-cyan {
+    background: #00d2ff;
+}
+
+.size-boxes {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.size-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.size-btn.active {
+    background: var(--accent-blue);
+    color: black;
+    border-color: var(--accent-blue);
+}
+
+.customizer-card {
+    background: rgba(0, 210, 255, 0.04);
+    border: 1px solid rgba(0, 210, 255, 0.2);
+    padding: 1rem;
+    border-radius: 12px;
+    margin-top: 1rem;
+}
+
+.customizer-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent-blue);
+    margin-bottom: 6px;
+}
+
+.customizer-card p {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.accent-btn {
+    width: 100%;
+    margin-top: 8px;
+    background: var(--accent-gradient);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.accent-btn:hover {
+    opacity: 0.9;
+    box-shadow: 0 4px 15px rgba(121, 40, 202, 0.4);
+}
+
+
+
+
+
+
+
+
+
+
 
 input:focus-visible,
 select:focus-visible,

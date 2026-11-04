@@ -169,7 +169,6 @@ body {
     border-radius: 16px;
     padding: 1.5rem;
     height: fit-content;
-
 }
 
 .filter-header {
@@ -237,4 +236,21 @@ body {
 .filter-group select,
 .customizer-card input {
     padding-left: 12px;
+}
+
+input:focus-visible,
+select:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 2px;
+}
+
+@media (max-width: 992px) {
+    .catalog-layout {
+        flex-direction: column;
+    }
+
+    .glow-sidebar {
+        width: 100%;
+    }
 }

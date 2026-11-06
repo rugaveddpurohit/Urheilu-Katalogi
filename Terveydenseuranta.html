@@ -1,219 +1,165 @@
-
 <!DOCTYPE html>
 <html lang="fi">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>TeamGear Pro - Terveydenseuranta</title>
-
-    <link rel="stylesheet" href="styles.css">
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="terveydenseuranta.css">
+    <script src="terveydenseuranta.js" defer></script>
 </head>
-
 <body>
 
-    <!-- Yläpalkki -->
-    <header class="luxury-navbar">
-
-        <div class="logo-box">
-            <i class="fa-solid fa-shield-halved logo-icon"></i>
-            <span class="logo-text">TEAMGEAR <span>PRO</span></span>
-        </div>
-
-        <nav class="nav-links">
-            <a href="index.html" class="nav-btn">Etusivu</a>
-            <a href="index.html" class="nav-btn">Verkkokauppa</a>
-            <a href="Terveydenseuranta.html" class="nav-btn active">
-                Terveydenseuranta
-            </a>
-            <a href="Teknologian-edut.html" class="nav-btn">
-                Teknologian edut
-            </a>
-            <a href="Ota-yhteytta.html" class="nav-btn">
-                Ota yhteyttä
-            </a>
+    <header>
+        <nav class="navbar">
+            <a href="#etusivu" class="logo">TeamGear Pro</a>
+            <ul class="nav-links">
+                <li><a href="#etusivu">Etusivu</a></li>
+                <li><a href="#terveys">Terveydenseuranta</a></li>
+                <li><a href="#yhteystiedot">Ota yhteyttä</a></li>
+            </ul>
         </nav>
-
     </header>
 
-
-    <!-- Pääsisältö -->
     <main>
-
-        <!-- Esittely -->
-        <section class="health-hero">
-
-            <h1>Terveydenseuranta</h1>
-
-            <p>
-                Seuraa omaa hyvinvointiasi ja kehity urheilijana.
-                TeamGear Pro auttaa sinua seuraamaan päivittäistä
-                aktiivisuuttasi, sykettäsi ja untasi.
-            </p>
-
-            <a href="#ominaisuudet" class="nav-btn">
-                Tutustu ominaisuuksiin
-            </a>
-
+        <!-- HERO -->
+        <section class="hero" id="etusivu">
+            <div class="hero-content">
+                <p class="small-title">TEAMGEAR PRO</p>
+                <h1>Seuraa hyvinvointiasi helposti</h1>
+                <p>
+                    TeamGear Pro auttaa sinua seuraamaan omaa aktiivisuuttasi,
+                    liikuntaasi ja hyvinvointiasi. Pienillä päivittäisillä
+                    valinnoilla voit parantaa omaa jaksamistasi.
+                </p>
+                <a href="#terveys" class="button">Tutustu ominaisuuksiin</a>
+            </div>
         </section>
 
-
-        <!-- Ominaisuudet -->
-        <section class="health-features" id="ominaisuudet">
-
-            <h2>Terveydenseurannan ominaisuudet</h2>
-
-            <p>
-                Älykellon avulla voit seurata monia tärkeitä
-                asioita omassa päivittäisessä elämässäsi.
-            </p>
-
-            <div class="catalog-layout">
-
-                <!-- Syke -->
-                <article class="health-card">
-
-                    <i class="fa-solid fa-heart-pulse"></i>
-
-                    <h3>Sykkeen seuranta</h3>
-
-                    <p>
-                        Seuraa sydämesi sykettä harjoittelun aikana
-                        ja levossa. Näet, kuinka kehosi reagoi
-                        liikuntaan.
-                    </p>
-
-                </article>
-
-
-                <!-- Askeleet -->
-                <article class="health-card">
-
-                    <i class="fa-solid fa-person-walking"></i>
-
-                    <h3>Askelten seuranta</h3>
-
-                    <p>
-                        Seuraa päivän aikana ottamiasi askeleita
-                        ja pidä huolta päivittäisestä liikkumisestasi.
-                    </p>
-
-                </article>
-
-
-                <!-- Uni -->
-                <article class="health-card">
-
-                    <i class="fa-solid fa-moon"></i>
-
-                    <h3>Unen seuranta</h3>
-
-                    <p>
-                        Seuraa nukkumisaikaasi ja opi ymmärtämään,
-                        kuinka tärkeää riittävä uni on palautumiselle.
-                    </p>
-
-                </article>
-
-
-                <!-- Kalorit -->
-                <article class="health-card">
-
-                    <i class="fa-solid fa-fire"></i>
-
-                    <h3>Kalorien seuranta</h3>
-
-                    <p>
-                        Saat arvion päivän aikana kuluttamistasi
-                        kaloreista ja voit seurata aktiivisuuttasi.
-                    </p>
-
-                </article>
-
-
-                <!-- Harjoittelu -->
-                <article class="health-card">
-
-                    <i class="fa-solid fa-dumbbell"></i>
-
-                    <h3>Harjoittelun seuranta</h3>
-
-                    <p>
-                        Seuraa harjoituksiasi ja kehitystäsi
-                        eri urheilulajeissa.
-                    </p>
-
-                </article>
-
-
-                <!-- Hyvinvointi -->
-                <article class="health-card">
-
-                    <i class="fa-solid fa-heart"></i>
-
-                    <h3>Hyvinvoinnin seuranta</h3>
-
-                    <p>
-                        Seuraa päivittäistä aktiivisuuttasi ja
-                        opi huolehtimaan omasta hyvinvoinnistasi.
-                    </p>
-
-                </article>
-
+        <!-- TERVEYDENSEURANTA -->
+        <section class="health-section" id="terveys">
+            <div class="section-heading">
+                <p class="small-title">OMAT TAVOITTEET</p>
+                <h2>Terveydenseuranta</h2>
+                <p>
+                    Seuraa päivittäistä aktiivisuuttasi ja pidä huolta
+                    hyvinvoinnistasi.
+                </p>
             </div>
 
+            <div class="health-cards">
+                <article class="health-card">
+                    <div class="card-icon" aria-hidden="true"></div>
+                    <h3>Sykkeen seuranta</h3>
+                    <p>
+                        Seuraa sykettäsi liikunnan aikana ja levossa.
+                        Näin voit tarkkailla kehosi toimintaa.
+                    </p>
+                </article>
+
+                <article class="health-card">
+                    <div class="card-icon" aria-hidden="true"></div>
+                    <h3>Askelmittari</h3>
+                    <p>
+                        Tarkkaile päivittäisiä askeliasi ja aseta
+                        itsellesi sopivia liikuntatavoitteita.
+                    </p>
+                </article>
+
+                <article class="health-card">
+                    <div class="card-icon" aria-hidden="true"></div>
+                    <h3>Unen seuranta</h3>
+                    <p>
+                        Seuraa nukkumistasi ja kiinnitä huomiota
+                        riittävään lepoon.
+                    </p>
+                </article>
+
+                <article class="health-card">
+                    <div class="card-icon" aria-hidden="true"></div>
+                    <h3>Kalorien seuranta</h3>
+                    <p>
+                        Voit tarkastella liikunnan aikana kulutettuja
+                        kaloreita ja omaa aktiivisuuttasi.
+                    </p>
+                </article>
+
+                <article class="health-card">
+                    <div class="card-icon" aria-hidden="true"></div>
+                    <h3>Liikunnan seuranta</h3>
+                    <p>
+                        Seuraa harjoitteluasi ja kehitystäsi
+                        eri liikuntamuodoissa.
+                    </p>
+                </article>
+
+                <article class="health-card">
+                    <div class="card-icon" aria-hidden="true"></div>
+                    <h3>Hyvinvointi</h3>
+                    <p>
+                        Pidä huolta omasta jaksamisestasi ja
+                        seuraa päivittäisiä tavoitteitasi.
+                    </p>
+                </article>
+            </div>
         </section>
 
+        <!-- YHTEYSTIEDOT -->
+        <section class="contact-section" id="yhteystiedot">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="small-title">OTA YHTEYTTÄ</p>
+                    <h2>Onko sinulla kysyttävää?</h2>
+                    <p>
+                        Voit lähettää meille viestin alla olevalla
+                        lomakkeella. Vastaamme kysymyksiisi mahdollisimman pian.
+                    </p>
+                </div>
 
-        <!-- Älykello -->
-        <section class="health-watch">
+                <form class="contact-form" id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="name">Nimi</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Kirjoita nimesi"
+                            required
+                            autocomplete="name"
+                        >
+                    </div>
 
-            <h2>Älykello urheilijan apuna</h2>
+                    <div class="form-group">
+                        <label for="email">Sähköposti</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="esimerkki@email.com"
+                            required
+                            autocomplete="email"
+                        >
+                    </div>
 
-            <p>
-                Älykello on hyödyllinen apuväline urheilussa.
-                Sen avulla voit seurata omaa aktiivisuuttasi,
-                harjoitteluasi ja palautumistasi.
-            </p>
+                    <div class="form-group">
+                        <label for="message">Viesti</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Kirjoita viestisi tähän"
+                            required
+                        ></textarea>
+                    </div>
 
-            <ul>
-                <li>Sykkeen mittaus</li>
-                <li>Askelmittari</li>
-                <li>Unen seuranta</li>
-                <li>Harjoitusten tallentaminen</li>
-                <li>Ilmoitukset puhelimesta</li>
-            </ul>
-
+                    <button type="submit" class="button">Lähetä viesti</button>
+                </form>
+            </div>
         </section>
-
-
-        <!-- Lopetus -->
-        <section class="health-ending">
-
-            <h2>Pidä huolta hyvinvoinnistasi</h2>
-
-            <p>
-                Pienetkin päivittäiset valinnat voivat auttaa
-                sinua saavuttamaan omat liikunta- ja
-                hyvinvointitavoitteesi.
-            </p>
-
-        </section>
-
     </main>
 
-
-    <!-- Alapalkki -->
-    <footer class="footer">
-
-        <p>&copy; 2026 TeamGear Pro. All rights reserved.</p>
-
+    <footer>
+        <p>© 2026 TeamGear Pro. Kaikki oikeudet pidätetään.</p>
     </footer>
 
 </body>
 </html>
-
